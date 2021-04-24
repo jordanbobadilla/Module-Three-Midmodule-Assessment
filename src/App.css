@@ -1,1 +1,13 @@
+.Products {
+    display: grid;
+    padding: 20px 40px;
+}
 
+.Products ul {
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    width: 300px;
+}
