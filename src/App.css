@@ -1,3 +1,8 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .Products {
     display: grid;
     padding: 20px 40px;
@@ -10,4 +15,27 @@
     list-style: none;
     padding: 0;
     width: 300px;
+}
+
+.Cart {
+    padding: 20px 40px;
+}
+
+.Checkout {
+    padding: 20px 40px;
+}
+
+.Checkout form{
+    display: flex;
+    flex-direction: column;
+}
+
+.Checkout input {
+    width: 200px;
+    margin: 10px 0px;
+}
+
+.Checkout button {
+    margin-top: 10px;
+    width: 100px;
 }

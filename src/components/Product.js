@@ -1,11 +1,12 @@
-const Product = ({name, price, img, description, addProduct}) => {
+const Product = ({product, addProduct, formatPrice}) => {
+    const {name, price, img, description} = product
     return (
         <li>
             <h3>{name}</h3>
-            <p>Price: {price}</p>
+            <p>Price: {formatPrice(price)}</p>
             <img src={img} alt="picture"/>
             <p>{description}</p>
-            <button>Add To Cart</button>
+            <button onClick={() => addProduct(product)}>Add To Cart</button>
         </li>
     )
 }

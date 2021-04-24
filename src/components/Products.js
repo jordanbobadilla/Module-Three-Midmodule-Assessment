@@ -1,26 +1,24 @@
 import Product from "./Product"
 import productData from "../data/productData"
-import formatPrice from "../helpers/formatPrice"
 
-const Products = ({addProduct}) => {
+
+const Products = ({formatPrice, addProduct}) => {
     return (
-        <main className="Products">
+        <section className="Products">
             <h1>My Garage Sale</h1>
             <ul>
                 {productData.map(product => {
                     return (
                     <Product
                         key={product.id}
-                        name={product.name}
-                        price={formatPrice(product.price)}
-                        img={product.img}
-                        description={product.description}
+                        product={product}
+                        formatPrice={formatPrice}
                         addProduct={addProduct}
                     />
                     )
                 })}
             </ul>
-        </main>
+        </section>
     )
 }
 
