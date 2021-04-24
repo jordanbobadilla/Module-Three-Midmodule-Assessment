@@ -47,7 +47,7 @@ class App extends Component {
         <Products formatPrice={formatPrice} addProduct={this.addProduct} />
         <div>
           <Cart formatPrice={formatPrice} cart={cart} subtotal={subtotal} tax={tax} total={total}/>
-          <Checkout />
+          <Checkout total={total}/>
         </div>
       </main>
     );
